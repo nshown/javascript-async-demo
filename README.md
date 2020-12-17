@@ -9,4 +9,6 @@ Most introduction to programming involves running a series of code and noting th
 
 Unfortunately, if the code you're writing drives a user interface, long running functions can have the effect of [freezing your UI](JsWebApiRequest/index.html) until those functions have completed.  
 
+![Don't let your code freeze!](Resources/fozen-caveman.png)
+
 JavaScript offers a range of functionality to address this issue.  Promises set aside functions until they have completed their initial task.  During this time the webpage functions as normal.  When the initial task has completed the Promise will execute the functions it has been passed, often processing data it has collected.  This allows for [calls to slow Web APIs](D3Ajax/index.html) without freezing your webpages.
