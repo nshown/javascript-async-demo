@@ -1,0 +1,35 @@
+.btn{
+    margin-bottom: 20px;
+}
+
+#dropdownMenuButton{
+    padding-left: 2px; 
+    padding-right: 2px; 
+    margin-left: 2px; 
+    margin-right: 2px;
+    width: 220px;
+}
+
+.jumbotron{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container{
+    margin-left: 50px; 
+    margin-right: 50px;
+    height: 500px;
+}
+
+.footer {
+    height: 40px;
+    position: fixed;
+    padding-top: 6px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightsteelblue;
+    color: white;
+    text-align: center;
+  }
+ 
