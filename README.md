@@ -1,5 +1,5 @@
 # Javascript Async Demo
-This is a simple demo to illustrate the importance of JavaScript's functional programming style and how it enables webpages to function.  I use Jupyter, D3, Plotly, and Bootstrap to illustrate how JavaScript elegantly handles long running functions.
+This is a simple demo to illustrate the importance of JavaScript's functional programming style and how it enables webpages to function.  I use Jupyter, D3, Plotly, and Bootstrap to illustrate how JavaScript elegantly handles long running functions that display line plots for data from [coindesk](https://www.coindesk.com/API).
 
 
 ---

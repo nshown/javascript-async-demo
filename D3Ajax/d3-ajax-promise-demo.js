@@ -59,5 +59,10 @@ function styleChart(){
   }
 }
 
+function sayHello(){
+  alert("Hello!  I am a message displayed by running a JavaScript function!");
+}
+
+d3.select("#say-hello-btn").on("click", sayHello);
 d3.select("#get-data-btn").on("click", getDataSynchronous);
 d3.selectAll(".style-plot-btn").on("click", styleChart);
