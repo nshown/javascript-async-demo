@@ -1,24 +1,26 @@
 const coindesk_url = "https://api.coindesk.com/v1/bpi/historical/close.json?start=2020-01-01&end=2020-02-29";
-const slowwly_url = "http://slowwly.robertomurray.co.uk/delay/8000/url/";
-const web_api_url = slowwly_url + coindesk_url;
 
 var data = [];
 var layout = {};
 
-function displayPlot(){
-  Plotly.newPlot("plot-here", data, layout, {displayModeBar: false});
+function displayPlot() {
+  Plotly.newPlot("plot-here", data, layout, { displayModeBar: false });
 }
 
-function getDataSynchronous()
-{
+function getDataSynchronous() {
+  var miliseconds = 7000;
+  var currentTime = new Date().getTime();
+  while (currentTime + miliseconds >= new Date().getTime()) {
+  }
+
   var request = new XMLHttpRequest();
-  request.open('GET', web_api_url, false);  // `false` makes the request synchronous
+  request.open('GET', coindesk_url, false);  // `false` makes the request synchronous
   request.send(null);
 
   if (request.status === 200) {
     console.log(request.responseText);
   }
-  else{
+  else {
     console.log("I wasn't able to get data from that url")
     return;
   }
@@ -35,7 +37,7 @@ function getDataSynchronous()
   data = [myTrace];
 
   layout = {
-    autosize:true,
+    autosize: true,
   }
 
   displayPlot();
@@ -43,22 +45,22 @@ function getDataSynchronous()
   console.log("Finally Finished!");
 }
 
-function styleChart(){
+function styleChart() {
   if (data.length !== 0) {
     var btnText = d3.event.target.innerText.toLowerCase();
 
     if (btnText === 'dark') {
-      data[0].line = {color: '#7F7F7F'};
-    
+      data[0].line = { color: '#7F7F7F' };
+
       layout = {
-        autosize:true,
-        plot_bgcolor:"black",
+        autosize: true,
+        plot_bgcolor: "black",
       }
     } else {
-      data[0].line = {color: 'dark blue'};
-    
+      data[0].line = { color: 'dark blue' };
+
       layout = {
-        autosize:true,
+        autosize: true,
       }
     }
 
@@ -66,7 +68,7 @@ function styleChart(){
   }
 }
 
-function sayHello(){
+function sayHello() {
   alert("Hello!  I am a message displayed by running a JavaScript function!");
 }
 
